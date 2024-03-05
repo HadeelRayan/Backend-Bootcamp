@@ -1,0 +1,172 @@
+org_chart_large = {
+    "name": "CEO",
+    "subordinates": [
+        {
+            "name": "CTO",
+            "subordinates": [
+                {
+                    "name": "Development",
+                    "subordinates": [
+                        {"name": "Engineering Manager"},
+                        {
+                            "name": "Software Engineers",
+                            "subordinates": [
+                                {"name": "Senior Developer"},
+                                {"name": "Developer"},
+                                {"name": "Junior Developer"}
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "QA",
+                    "subordinates": [
+                        {"name": "QA Manager"},
+                        {"name": "QA Engineers"}
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "CFO",
+            "subordinates": [
+                {"name": "Finance Manager"},
+                {
+                    "name": "Accounting",
+                    "subordinates": [
+                        {"name": "Senior Accountant"},
+                        {"name": "Junior Accountant"}
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "COO",
+            "subordinates": [
+                {
+                    "name": "Operations",
+                    "subordinates": [
+                        {"name": "Operations Manager"},
+                        {"name": "Logistics Team"}
+                    ]
+                },
+                {
+                    "name": "HR",
+                    "subordinates": [
+                        {"name": "HR Manager"},
+                        {"name": "Recruitment Team"}
+                    ]
+                }
+            ]
+        }
+    ]
+}
+
+tech_company_org_chart_2 = {
+    "name": "CEO",
+    "subordinates": [
+        {
+            "name": "CTO",
+            "subordinates": [
+                {
+                    "name": "Engineering",
+                    "subordinates": [
+                        {"name": "Engineering Manager"},
+                        {"name": "Development Team"}
+                    ]
+                },
+                {
+                    "name": "Product",
+                    "subordinates": [
+                        {"name": "Product Manager"},
+                        {"name": "UX/UI Design Team"}
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "CFO",
+            "subordinates": [
+                {"name": "Finance Manager"},
+                {"name": "Accounting Team"}
+            ]
+        },
+        {
+            "name": "COO",
+            "subordinates": [
+                {
+                    "name": "Operations",
+                    "subordinates": [
+                        {"name": "Operations Manager"},
+                        {"name": "Logistics Team"}
+                    ]
+                },
+                {
+                    "name": "HR",
+                    "subordinates": [
+                        {"name": "HR Manager"},
+                        {"name": "Recruitment Team"}
+                    ]
+                }
+            ]
+        }
+    ]
+}
+
+tech_company_org_chart_3 = {
+    "name": "CEO",
+    "subordinates": [
+        {
+            "name": "CTO",
+            "subordinates": [
+                {
+                    "name": "Software Development",
+                    "subordinates": [
+                        {"name": "Development Manager"},
+                        {
+                            "name": "Software Engineers",
+                            "subordinates": [
+                                {"name": "Frontend Developer"},
+                                {"name": "Backend Developer"},
+                                {"name": "DevOps Engineer"}
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Data Science",
+                    "subordinates": [
+                        {"name": "Data Science Manager"},
+                        {"name": "Data Scientists"}
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "CFO",
+            "subordinates": [
+                {"name": "Finance Manager"},
+                {"name": "Financial Analysts"}
+            ]
+        },
+        {
+            "name": "COO",
+            "subordinates": [
+                {
+                    "name": "Operations",
+                    "subordinates": [
+                        {"name": "Operations Manager"},
+                        {"name": "Quality Assurance Team"}
+                    ]
+                },
+                {
+                    "name": "HR",
+                    "subordinates": [
+                        {"name": "HR Manager"},
+                        {"name": "Employee Relations Team"}
+                    ]
+                }
+            ]
+        }
+    ]
+}
