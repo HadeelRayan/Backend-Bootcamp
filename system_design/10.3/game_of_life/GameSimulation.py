@@ -73,4 +73,5 @@ def simulate_game(board, rounds):
         board = simulate_game_round(board)
         print("Simulating round", {i+1}, ", this is the current game board ")
         Board.print_board(board)
+    print("End of the game")
     return board
