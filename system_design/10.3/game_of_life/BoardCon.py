@@ -1,27 +1,26 @@
-def create_board():
-    board
+def create_board(size=8):
+    """
+    Initialize an empty board for Game of Life.
+
+    Parameters:
+    - size (int): The width and height of the square board. Default is 8.
+
+    Returns:
+    - List[List[int]]: A 2D list representing the board, filled with 0s.
+    """
+    board = [[0 for _ in range(size)] for _ in range(size)]
     return board
 
 
 def print_board(board):
+    """
+    Print the current state of the game board.
 
+    Parameters:
+    - board (List[List[int]]): The game board to print, where 0 represents a dead cell and 1 represents a living cell.
+    """
+    for row in board:
+        print(' '.join(['▓' if cell == 1 else '░' for cell in row]))
+    print()  # Add an extra newline for better readability between prints.
 
-
-def update_board(board):
-    """Apply the Game of Life rules to the board and return the updated board."""
-    new_board = create_board()  # Start with a new board to avoid modifying the input board in-place.
-    for row in range(len(board)):
-        for col in range(len(board[0])):
-            alive_neighbors = sum(get_neighbors(board, row, col))
-            if board[row][col] == 1:  # Cell is alive.
-                # Apply underpopulation and overpopulation rules.
-                if alive_neighbors < 2 or alive_neighbors > 3:
-                    new_board[row][col] = 0
-                else:
-                    new_board[row][col] = 1
-            else:  # Cell is dead.
-                # Apply reproduction rule.
-                if alive_neighbors == 3:
-                    new_board[row][col] = 1
-    return new_board
 
