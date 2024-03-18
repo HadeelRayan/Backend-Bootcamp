@@ -20,6 +20,23 @@ def assert_smaller(tested_value, compare_value):
         print("assert smaller than: Test Failed: Expected smaller than", tested_value)
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 def assert_included_in_list(tested_value, list_to_check):
     if tested_value in list_to_check:
         print("assert included in list: Test Passed")

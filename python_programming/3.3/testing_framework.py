@@ -10,6 +10,25 @@ def tests():
     assertion.assert_smaller(4, 1)
     assertion.assert_included_in_list(3, [1, 2, 3])
     assertion.assert_included_in_list(3, [5, 2, 2])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     assertion.assert_key_in_dic("name", {"name": "Hadeel", "age": 25})
     assertion.assert_key_in_dic("gender", {"name": "Hadeel", "age": 25})
     assertion.assert_included_in_dict(25, {"name": "Hadeel", "age": 25})
