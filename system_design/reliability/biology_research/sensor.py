@@ -2,6 +2,7 @@ import json
 import random
 import time
 from datetime import datetime
+import json_fns as fns
 
 
 def generate_record():
@@ -14,20 +15,42 @@ def generate_record():
 
 
 def write_record_to_file(file_path, record):
-    """Append a record to the JSON file, ensuring data integrity."""
     try:
+        fns.raise_random_exception_with_probability()  # Attempt to simulate a failure
+
+        # If no exception was raised, proceed to append the record to the file
         with open(file_path, 'r+') as file:
-            # Move to the beginning of the file, read existing data, then return to start
+            # Read existing data
             file.seek(0)
-            data = json.load(file)
-            file.seek(0)
+            try:
+                data = json.load(file)
+            except json.JSONDecodeError:
+                # Handle empty file by initializing data as an empty list
+                data = []
+
+            # Append new record and write back to file
             data.append(record)
+            file.seek(0)
             json.dump(data, file, indent=4)
-            file.truncate()  # Remove any remaining part of old data
+            file.truncate()
+
+        print("Record successfully written to file.")
+
     except FileNotFoundError:
-        # If the file does not exist, create it and write the record as the first entry
-        with open(file_path, 'w') as file:
-            json.dump([record], file, indent=4)
+        print("FileNotFoundError: The file was not found.")
+    except PermissionError:
+        print("PermissionError: You don't have permission to access this file.")
+    except IsADirectoryError:
+        print("IsADirectoryError: The specified path is a directory, not a file.")
+    except FileExistsError:
+        print("FileExistsError: The file already exists.")
+    except NotADirectoryError:
+        print("NotADirectoryError: A component of the path is not a directory.")
+    except IOError:
+        print("IOError: An I/O error occurred.")
+    finally:
+        global failure_probability
+        failure_probability = 0
 
 
 def create_sensor_record(file_path, total_records=100):

@@ -20,7 +20,6 @@ def raise_random_exception_with_probability():
             ### READ/WRITE CODE HERE ###
             if failure_probability < 1.0: # Cap the failure probability at 100%
                 failure_probability += 0.05 # Increase failure probability
-            print('failure_probability after: ', failure_probability)
 
     except Exception as e:
         failure_probability = 0 # Reset failure probability upon failure
