@@ -1,0 +1,27 @@
+{
+  "Asphalt": {
+    "terrain_hardness": 1,
+    "mental_effect": 2,
+    "wheel_damage_effect": 0.1
+  },
+  "Gravel": {
+    "terrain_hardness": 3,
+    "mental_effect": -1,
+    "wheel_damage_effect": 0.5
+  },
+  "Mud": {
+    "terrain_hardness": 5,
+    "mental_effect": -3,
+    "wheel_damage_effect": 1
+  },
+  "Snow": {
+    "terrain_hardness": 4,
+    "mental_effect": -2,
+    "wheel_damage_effect": 0.7
+  },
+  "NewRoadType": {
+    "terrain_hardness": 6,
+    "mental_effect": -4,
+    "wheel_damage_effect": 1.2
+  }
+}
